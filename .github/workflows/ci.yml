@@ -33,9 +33,9 @@ jobs:
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/hi-app:latest
-      
+
     - name: Generate code coverage
       run: npm run test -- --coverage
 
     - name: Build Docker image
-      run: docker build -t hi-app .
+      run: docker build -t botbrewlabs/hi-app:latest .
